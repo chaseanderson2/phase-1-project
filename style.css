@@ -1,0 +1,74 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: darkgrey;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+/* Container for the Amiibo items */
+.amiibo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Styling for each individual Amiibo item */
+.amiibo-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.amiibo-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  cursor: pointer;  /* Change the cursor to indicate clickability */
+}
+
+.amiibo-item h2 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.amiibo-item p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Styles for the overlay that will appear when the image is clicked */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);  /* Dark translucent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;  /* Indicate that clicking will close the overlay */
+}
+
+/* Styling for the expanded image */
+.expanded-image {
+  max-width: 75%;  /* Make the image take up 75% of the screen width */
+  max-height: 75vh;  /* Limit the image height to 75% of the viewport height */
+  object-fit: contain;  /* Ensure the image scales properly */
+}
