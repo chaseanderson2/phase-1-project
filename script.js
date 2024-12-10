@@ -27,7 +27,7 @@ function fetchAmiiboData() {
       // Add an event listener to filter Amiibos when the dropdown value changes
       amiiboDropdown.addEventListener('change', (e) => {
         const selectedName = e.target.value;
-        const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName || selectedName === "All");
+        const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName );
         displayAmiibos(filteredAmiibos);
       });
     })
