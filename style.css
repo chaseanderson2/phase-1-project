@@ -1,7 +1,7 @@
 /* General styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: darkgrey;
+  background-color: #05f043;
   color: white;
   margin: 0;
   padding: 20px;
@@ -9,7 +9,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #fff;
+  color: black;
 }
 
 /* Container for the Amiibo items */
@@ -23,8 +23,8 @@ h1 {
 
 /* Styling for each individual Amiibo item */
 .amiibo-item {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: #76b386;
+  border: 3px solid black;
   border-radius: 10px;
   padding: 20px;
   flex: 1 1 300px;
