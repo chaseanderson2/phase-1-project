@@ -1,6 +1,6 @@
 # Yoshi Amiibo Collection
 
-This is a web app that displays information about Yoshi Amiibo figurines. The app allows the user to filter between the different Yoshi Amiibos and look their data. You can click on the images to zoom them in to get a closer look at the figurines, as well as an option to make the background of the page dark to help reduce eye strain. 
+This is a web app that displays information about Yoshi Amiibo figurines. The app allows the user to filter between the different Yoshi Amiibos and look their data. You can click on the images to zoom them in to get a closer look at the figurines, as well as an option to make the background of the page dark to help reduce eye strain(or if the vibrant Green is not your thing). 
 
 ## Installation
 
