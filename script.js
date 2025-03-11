@@ -25,11 +25,20 @@ function fetchAmiiboData() {
       displayAmiibos(amiibos);
 
       // Add an event listener to filter Amiibos when the dropdown value changes
-      amiiboDropdown.addEventListener('change', (e) => {
-        const selectedName = e.target.value;
-        const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName );
-        displayAmiibos(filteredAmiibos);
-      });
+      // Add an event listener to filter Amiibos when the dropdown value changes
+amiiboDropdown.addEventListener('change', (e) => {
+  const selectedName = e.target.value;
+  const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName);
+  // Hide the default option text when an option is selected
+  if (selectedName) {
+    amiiboDropdown.options[0].style.display = 'none';  // Hide the first option
+  } else {
+    amiiboDropdown.options[0].style.display = 'block'; // Show it back if nothing is selected
+  }
+  // Display the filtered Amiibos
+  displayAmiibos(filteredAmiibos);
+});
+
     })
     .catch(error => console.error('Error fetching Amiibo data:', error));
 }
