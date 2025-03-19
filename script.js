@@ -25,18 +25,18 @@ function fetchAmiiboData() {
       displayAmiibos(amiibos);
 
       // Add an event listener to filter Amiibos when the dropdown value changes
-amiiboDropdown.addEventListener('change', (e) => {
-  const selectedName = e.target.value;
-  const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName);
-  // Hide the default option text when an option is selected
-  if (selectedName) {
-    amiiboDropdown.options[0].style.display = 'none';  // Hide the first option
-  } else {
-    amiiboDropdown.options[0].style.display = 'block'; // Show it back if nothing is selected
-  }
-  // Display the filtered Amiibos
-  displayAmiibos(filteredAmiibos);
-});
+      amiiboDropdown.addEventListener('change', (e) => {
+        const selectedName = e.target.value;
+        const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName);
+        // Hide the default option text when an option is selected
+        if (selectedName) {
+          amiiboDropdown.options[0].style.display = 'none';  // Hide the first option
+        } else {
+          amiiboDropdown.options[0].style.display = 'block'; // Show it back if nothing is selected
+        }
+        // Display the filtered Amiibos
+        displayAmiibos(filteredAmiibos);
+      });
 
     })
     .catch(error => console.error('Error fetching Amiibo data:', error));
@@ -52,14 +52,9 @@ function displayAmiibos(amiibos) {
     const amiiboDiv = document.createElement('div');
     amiiboDiv.classList.add('amiibo-item');
     
-    const name = document.createElement('h2');
-    name.textContent = amiibo.name;
-    
-    const gameSeries = document.createElement('p');
-    gameSeries.textContent = `Game Series: ${amiibo.gameSeries}`;
-    
-    const releaseDate = document.createElement('p');
-    releaseDate.textContent = `NA Release Date: ${amiibo.release.na}`;
+    // Create a container for the image
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('image-container');
     
     const image = document.createElement('img');
     image.src = amiibo.image;
@@ -70,11 +65,30 @@ function displayAmiibos(amiibos) {
       expandImage(image.src);  // Pass the image src to the expandImage function
     });
     
-    // Append the elements to the Amiibo div
-    amiiboDiv.appendChild(image);
-    amiiboDiv.appendChild(name);
-    amiiboDiv.appendChild(gameSeries);
-    amiiboDiv.appendChild(releaseDate);
+    // Append the image to its container
+    imageContainer.appendChild(image);
+    
+    // Create a container for the text
+    const textContainer = document.createElement('div');
+    textContainer.classList.add('text-container');
+    
+    const name = document.createElement('h2');
+    name.textContent = amiibo.name;
+    
+    const gameSeries = document.createElement('p');
+    gameSeries.textContent = `Game Series: ${amiibo.gameSeries}`;
+    
+    const releaseDate = document.createElement('p');
+    releaseDate.textContent = `NA Release Date: ${amiibo.release.na}`;
+    
+    // Append text elements to the text container
+    textContainer.appendChild(name);
+    textContainer.appendChild(gameSeries);
+    textContainer.appendChild(releaseDate);
+    
+    // Append the image and text containers to the Amiibo div
+    amiiboDiv.appendChild(imageContainer);
+    amiiboDiv.appendChild(textContainer);
     
     // Append the Amiibo div to the container
     amiiboContainer.appendChild(amiiboDiv);
@@ -109,7 +123,6 @@ function expandImage(src) {
   document.body.appendChild(overlay);
 }
 
-
 // Function to change background color to black
 function changeBackgroundColor() {
   // Set the background color to black
@@ -119,7 +132,6 @@ function changeBackgroundColor() {
 // Event listener for the "Change Background Color" button
 const colorChangeButton = document.getElementById('color-change-btn'); // Ensure the ID matches here
 colorChangeButton.addEventListener('click', changeBackgroundColor);
-
 
 // Call the function to fetch and display the data when the page loads
 window.onload = fetchAmiiboData;
