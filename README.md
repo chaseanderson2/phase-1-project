@@ -12,7 +12,7 @@ This is a web app that displays information about Yoshi Amiibo figurines. The ap
 
 1. Open the 'index.html' file in your browser
 2. Use the dropdown menu to filter the Amiibos by name.
-3. Click on any Amiibo image to see an expanded version.
+3. Click on any Amiibo image to see an expanded version. To close the selected image, simply click anywhere on the screen again.
 4. Click on the "Enable Dark Background" button to turn the background to the color black.
 
 ## License
