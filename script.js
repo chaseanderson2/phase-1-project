@@ -25,7 +25,6 @@ function fetchAmiiboData() {
       displayAmiibos(amiibos);
 
       // Add an event listener to filter Amiibos when the dropdown value changes
-      // Add an event listener to filter Amiibos when the dropdown value changes
 amiiboDropdown.addEventListener('change', (e) => {
   const selectedName = e.target.value;
   const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName);
@@ -84,6 +83,12 @@ function displayAmiibos(amiibos) {
 
 // Function to expand the image
 function expandImage(src) {
+  // Check if an overlay already exists, and if so, remove it
+  const existingOverlay = document.querySelector('.overlay');
+  if (existingOverlay) {
+    existingOverlay.remove();  // Remove the existing overlay if present
+  }
+
   // Create a full-screen overlay for the expanded image
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
@@ -103,6 +108,7 @@ function expandImage(src) {
   // Append the overlay to the body
   document.body.appendChild(overlay);
 }
+
 
 // Function to change background color to black
 function changeBackgroundColor() {
