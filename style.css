@@ -16,9 +16,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
   width: 100%;
-  gap: 10px;
 }
 
 /* Styling for each individual Amiibo item */
@@ -30,11 +28,10 @@ h1 {
   display: flex;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
   height: 150px;
   overflow: hidden;
   padding-bottom: 5px;
-
+  gap: 20px;
 }
 
 .image-container {
