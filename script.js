@@ -139,7 +139,6 @@ amiiboItems.forEach(item => {
  title.style.color = 'grey';  // Title color matches the background
 
 // Optionally, you could change button text to something like "Disable Dark Mode"
-colorChangeButton.textContent = 'Disable Dark Background';
 colorChangeButton.removeEventListener('click', changeBackgroundColor);
 colorChangeButton.addEventListener('click', resetBackgroundColor);
 }
