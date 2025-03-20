@@ -1,6 +1,6 @@
 # Yoshi Amiibo Collection
 
-This is a web app that displays information about Yoshi Amiibo figurines. The app allows the user to filter between the different Yoshi Amiibos and look their data. You can click on the images to zoom them in to get a closer look at the figurines, as well as an option to make the background of the page dark to help reduce eye strain(or if the vibrant Green is not your thing). 
+This is a web app that displays information about Yoshi Amiibo figurines. The app allows the user to filter between the different Yoshi Amiibos and look their data. You can click on the images to zoom them in to get a closer look at the figurines, as well as an option to change the shades of green on the page to plain colors to help reduce eye strain(or if the vibrant Green is not your thing). 
 
 ## Installation
 
@@ -13,7 +13,7 @@ This is a web app that displays information about Yoshi Amiibo figurines. The ap
 1. Open the 'index.html' file in your browser
 2. Use the dropdown menu to filter the Amiibos by name.
 3. Click on any Amiibo image to see an expanded version. To close the selected image, simply click anywhere on the screen again.
-4. Click on the "Enable Dark Background" button to turn the background to the color black.
+4. Click on the "Enable Plain Colors" button to turn the colors to Black and Grey.
 
 ## License
 
