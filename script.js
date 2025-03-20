@@ -123,10 +123,21 @@ function expandImage(src) {
   document.body.appendChild(overlay);
 }
 
-// Function to change background color to black
+// Function to change background color to black (for both body and container)
 function changeBackgroundColor() {
-  // Set the background color to black
+  // Set the background color to black for the body
   document.body.style.backgroundColor = 'black';
+  
+// Change the background color of each amiibo-item to grey
+const amiiboItems = document.querySelectorAll('.amiibo-item');
+amiiboItems.forEach(item => {
+  item.style.backgroundColor = 'grey';  // Dark grey for individual items
+});
+
+// Optionally, you could change button text to something like "Disable Dark Mode"
+colorChangeButton.textContent = 'Disable Dark Background';
+colorChangeButton.removeEventListener('click', changeBackgroundColor);
+colorChangeButton.addEventListener('click', resetBackgroundColor);
 }
 
 // Event listener for the "Change Background Color" button
