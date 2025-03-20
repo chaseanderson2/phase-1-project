@@ -88,3 +88,9 @@ h1 {
   max-height: 90%;
   object-fit: contain;  /* Make sure the image maintains its aspect ratio */
 } 
+
+.API-weblink {
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+}
