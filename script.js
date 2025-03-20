@@ -10,7 +10,7 @@ function fetchAmiiboData() {
       const amiiboDropdown = document.getElementById('amiiboDropdown');
       const amiibos = data.amiibo;
 
-      // Create an array of names for the dropdown search
+      // An array of names for the dropdown search
       const amiiboNames = amiibos.map(amiibo => amiibo.name);
 
       // Populate the dropdown with Amiibo names
@@ -24,7 +24,7 @@ function fetchAmiiboData() {
       // Display all Amiibos initially
       displayAmiibos(amiibos);
 
-      // Add an event listener to filter Amiibos when the dropdown value changes
+      // An event listener that will filter Amiibos when the dropdown value changes
       amiiboDropdown.addEventListener('change', (e) => {
         const selectedName = e.target.value;
         const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName);
@@ -52,7 +52,7 @@ function displayAmiibos(amiibos) {
     const amiiboDiv = document.createElement('div');
     amiiboDiv.classList.add('amiibo-item');
     
-    // Create a container for the image
+    // A container for the images
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('image-container');
     
@@ -60,7 +60,7 @@ function displayAmiibos(amiibos) {
     image.src = amiibo.image;
     image.alt = amiibo.name;
 
-    // Add an event listener for clicking on the image to expand it
+    // An event listener for clicking on the image to expand it
     image.addEventListener('click', () => {
       expandImage(image.src);  // Pass the image src to the expandImage function
     });
@@ -68,7 +68,7 @@ function displayAmiibos(amiibos) {
     // Append the image to its container
     imageContainer.appendChild(image);
     
-    // Create a container for the text
+    // A container for the text
     const textContainer = document.createElement('div');
     textContainer.classList.add('text-container');
     
@@ -103,7 +103,7 @@ function expandImage(src) {
     existingOverlay.remove();  // Remove the existing overlay if present
   }
 
-  // Create a full-screen overlay for the expanded image
+  // Creates a full-screen overlay for the expanded image
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
   
@@ -114,7 +114,7 @@ function expandImage(src) {
   // Append the expanded image to the overlay
   overlay.appendChild(expandedImage);
   
-  // Add an event listener to close the overlay when clicked
+  // An event listener that will close the overlay when clicked
   overlay.addEventListener('click', () => {
     overlay.remove();  // Remove the overlay when clicked
   });
@@ -137,10 +137,6 @@ amiiboItems.forEach(item => {
  // Change the color of the title (h1) to match the background color (black)
  const title = document.querySelector('h1');
  title.style.color = 'grey';  // Title color matches the background
-
-// Optionally, you could change button text to something like "Disable Dark Mode"
-colorChangeButton.removeEventListener('click', changeBackgroundColor);
-colorChangeButton.addEventListener('click', resetBackgroundColor);
 }
 
 // Event listener for the "Change Background Color" button
