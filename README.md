@@ -1,12 +1,12 @@
 # Yoshi Amiibo Collection
 
-This is a web app that displays information about Yoshi Amiibo figurines. The app allows the user to filter between the different Yoshi Amiibos and look their data. You can click on the images to zoom them in to get a closer look at the figurines, as well as an option to change the shades of green on the page to plain colors to help reduce eye strain(or if the vibrant Green is not your thing). 
+This is a web app that displays information about the various Yoshi Amiibo figurines. The app allows the user to filter between the different Yoshi Amiibos and look their data. You can click on the images to zoom them in to get a closer look at the figurines, and users have the option to change the shades of green on the page to plain colors to help reduce eye strain(or if the vibrant Green is not your thing). 
 
 ## Installation
 
 1. Clone the repository:
 2. Navigate to the project directory:
-3. In your terminal emulator of choice, open the 'index.html' file into your browser.
+3. In your terminal emulator of choice, open the 'index.html' file into your browser. Alternatively, you could navigate to the directory in your file browser and click on the file to open it as well.
 
 ## Usage
 
