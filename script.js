@@ -134,6 +134,10 @@ amiiboItems.forEach(item => {
   item.style.backgroundColor = 'grey';  // Dark grey for individual items
 });
 
+ // Change the color of the title (h1) to match the background color (black)
+ const title = document.querySelector('h1');
+ title.style.color = 'grey';  // Title color matches the background
+
 // Optionally, you could change button text to something like "Disable Dark Mode"
 colorChangeButton.textContent = 'Disable Dark Background';
 colorChangeButton.removeEventListener('click', changeBackgroundColor);
