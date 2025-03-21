@@ -20,5 +20,5 @@ This is a web app that displays information about the various Yoshi Amiibo figur
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgements
-- Thanks to [Amiibo API](https://www.amiiboapi.com/) for providing the data and pictures used in this project.
+- Thanks to Nevin Vu and other contributors for creating this[Amiibo API](https://www.amiiboapi.com/). The data for this project was pulled from it.
 - **Nintendo**: Special thanks to Nintendo for creating the beloved character **Yoshi**, whose Amiibo data is featured in this project. All rights to Yoshi and related intellectual properties belong to Nintendo.
