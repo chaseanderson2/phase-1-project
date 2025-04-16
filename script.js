@@ -137,6 +137,9 @@ amiiboItems.forEach(item => {
  // Changes the color of the title (h1) to match the background color (black)
  const title = document.querySelector('h1');
  title.style.color = 'grey';  // Title color matches the background
+
+ const apiWeblink = document.querySelector('.API-weblink');
+ apiWeblink.style.color = 'grey';  // Makes the weblink text white for visibility
 }
 
 // Event listener for the "Change Background Color" button
