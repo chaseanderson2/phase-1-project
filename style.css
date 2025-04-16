@@ -2,8 +2,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #0ec73f;
   color: black;
-  margin: 0;
-  padding: 20px;
+  margin: 0; /* Removes any default margin from the web browser */
+  padding: 20px; /* Creates space between the content and the edge of the page*/
 }
 
 h1 {
@@ -13,9 +13,9 @@ h1 {
 
 /* Container for the Amiibo items */
 .amiibo-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: flex; /* Creates flexible stlying for the amiibo items*/
+  flex-wrap: wrap; /* Allows items to wrap to next line if there is not enough space*/
+  justify-content: space-around; /* Distributes items with equal spacing*/
   width: 100%;
 }
 
@@ -24,12 +24,12 @@ h1 {
   background-color: #76b386;
   border: 4px solid black;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px; /* Gives space between the content and the border*/
   display: flex;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 150px;
-  overflow: hidden;
+  height: 150px; /* Gives the amiibo cards a fixed height*/
+  overflow: hidden; /* Ensures that anything that overflows the boundaries gets hidden*/
   padding-bottom: 5px;
   gap: 20px;
 }
