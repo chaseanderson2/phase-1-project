@@ -6,28 +6,28 @@ function fetchAmiiboData() {
   fetch(apiUrl)
     .then(response => response.json())  // Parse the JSON response
     .then(data => {
-      const amiiboContainer = document.getElementById('amiibo-container');
-      const amiiboDropdown = document.getElementById('amiiboDropdown');
-      const amiibos = data.amiibo;
+      const amiiboContainer = document.getElementById('amiibo-container'); // Grabs the amiibo-container div
+      const amiiboDropdown = document.getElementById('amiiboDropdown'); // Grabs the <select> dropdown for the amiibo filter
+      const amiibos = data.amiibo; // Accesses the amiibo objects from the array
 
       // An array of names for the dropdown search
       const amiiboNames = amiibos.map(amiibo => amiibo.name);
 
       // Populate the dropdown with Amiibo names
       amiiboNames.forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        amiiboDropdown.appendChild(option);
+        const option = document.createElement('option'); // This creates <option> elements for the <select> dropdown
+        option.value = name; // Sets the value for the <option> element
+        option.textContent = name; // Sets the value for what the user will see in the dropdown
+        amiiboDropdown.appendChild(option); // appends the child into the existing <select> dropdown
       });
 
       // Display all Amiibos initially
       displayAmiibos(amiibos);
 
       // An event listener that will filter Amiibos when the dropdown value changes
-      amiiboDropdown.addEventListener('change', (e) => {
-        const selectedName = e.target.value;
-        const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName);
+      amiiboDropdown.addEventListener('change', (e) => { 
+        const selectedName = e.target.value; // This grabs the name of the selected option
+        const filteredAmiibos = amiibos.filter(amiibo => amiibo.name === selectedName); // Filters through the whole list to grab the one the user selected
         // Hide the default option text when an option is selected
         if (selectedName) {
           amiiboDropdown.options[0].style.display = 'none';  // Hide the first option
@@ -39,15 +39,15 @@ function fetchAmiiboData() {
       });
 
     })
-    .catch(error => console.error('Error fetching Amiibo data:', error));
+    .catch(error => console.error('Error fetching Amiibo data:', error)); // Simple console log for if the API cannot be fetched
 }
 
 // Function to display Amiibo data
 function displayAmiibos(amiibos) {
   const amiiboContainer = document.getElementById('amiibo-container');
-  amiiboContainer.innerHTML = '';  // Clear the current list before displaying new data
+  amiiboContainer.innerHTML = '';  // Clears the current list before displaying new data
 
-  // Loop through each Amiibo and create the HTML elements for each one
+  // Loops through each Amiibo and creates the HTML elements for each one
   amiibos.forEach(amiibo => {
     const amiiboDiv = document.createElement('div');
     amiiboDiv.classList.add('amiibo-item');
@@ -125,22 +125,22 @@ function expandImage(src) {
 
 // Function to change background color to black (for both body and container)
 function changeBackgroundColor() {
-  // Set the background color to black for the body
+  // Sets the background color to black for the body
   document.body.style.backgroundColor = 'black';
   
-// Change the background color of each amiibo-item to grey
+// Changes the background color of each amiibo-item to grey
 const amiiboItems = document.querySelectorAll('.amiibo-item');
 amiiboItems.forEach(item => {
   item.style.backgroundColor = 'grey';  // Dark grey for individual items
 });
 
- // Change the color of the title (h1) to match the background color (black)
+ // Changes the color of the title (h1) to match the background color (black)
  const title = document.querySelector('h1');
  title.style.color = 'grey';  // Title color matches the background
 }
 
 // Event listener for the "Change Background Color" button
-const colorChangeButton = document.getElementById('color-change-btn'); // Ensure the ID matches here
+const colorChangeButton = document.getElementById('color-change-btn'); 
 colorChangeButton.addEventListener('click', changeBackgroundColor);
 
 // Call the function to fetch and display the data when the page loads
